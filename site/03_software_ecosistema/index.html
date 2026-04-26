@@ -1,0 +1,1412 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A new project generated from the default template project.">
+      
+      
+        <meta name="author" content="<your name here>">
+      
+      
+      
+        <link rel="prev" href="../02_modelos/">
+      
+      
+        <link rel="next" href="../04_materiales_proyectos/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.32">
+    
+    
+      
+        <title>Módulo 3: Ecosistema de Software y Gestión de Aula - Impresión FDM</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.53a7feaf.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="Navegación"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modulo-3-ecosistema-de-software-y-gestion-de-aula" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="./.." title="Impresión FDM" class="md-header__button md-logo" aria-label="Impresión FDM" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navegación">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Impresión FDM
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Módulo 3: Ecosistema de Software y Gestión de Aula
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Buscar">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Buscar">
+  <button type="button" class="md-search__button">
+    Buscar
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="Impresión FDM" class="md-nav__button md-logo" aria-label="Impresión FDM" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    Impresión FDM
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Curso de impresión FDM con Creality K1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_hardware_k1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📑 Módulo 1: Impresión FDM y Hardware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_modelos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 2: Diseño y Obtención de Modelos 3D
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 3: Ecosistema de Software y Gestión de Aula
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 3: Ecosistema de Software y Gestión de Aula
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion-del-modelo-digital-a-la-realidad-fisica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introducción: Del modelo digital a la realidad física
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos-del-modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivos del Módulo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31-creality-print-configuracion-de-perfiles-y-optimizacion-de-capas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Creality Print: Configuración de perfiles y optimización de capas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1. Creality Print: Configuración de perfiles y optimización de capas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-interfaz-y-configuracion-de-la-impresora" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Interfaz y Configuración de la Impresora
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-perfiles-de-impresion-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Perfiles de Impresión (Presets)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-optimizacion-de-capas-el-concepto-de-capa-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Optimización de Capas: El concepto de "Capa Variable"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-preparacion-del-archivo-slicing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Preparación del Archivo (Slicing)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-parametros-esenciales-gestion-de-soportes-rellenos-y-flujo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Parámetros Esenciales: Gestión de soportes, rellenos y flujo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2. Parámetros Esenciales: Gestión de soportes, rellenos y flujo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-gestion-de-soportes-el-modelo-tree-arbol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Gestión de Soportes: El modelo "Tree" (Árbol)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-rellenos-infill-resistencia-vs-tiempo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Rellenos (Infill): Resistencia vs. Tiempo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-gestion-del-flujo-flow-y-velocidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Gestión del Flujo (Flow) y Velocidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-adherencia-a-la-placa-brim-y-raft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Adherencia a la placa (Brim y Raft)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-creality-cloud-acceso-a-bibliotecas-de-modelos-y-gestion-de-aula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Creality Cloud: Acceso a bibliotecas de modelos y gestión de aula
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Creality Cloud: Acceso a bibliotecas de modelos y gestión de aula">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-acceso-a-la-biblioteca-de-modelos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Acceso a la Biblioteca de Modelos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-gestion-de-impresion-remota-cloud-printing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Gestión de Impresión Remota (Cloud Printing)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-integracion-de-alumnos-gestion-de-aula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Integración de Alumnos (Gestión de Aula)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-creality-m1-e-impacto-ambiental" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Creality M1 e Impacto Ambiental
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-integracion-con-ia-uso-de-la-camara-para-supervision-y-funciones-inteligentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4. Integración con IA: Uso de la cámara para supervisión y funciones inteligentes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4. Integración con IA: Uso de la cámara para supervisión y funciones inteligentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-deteccion-de-spaghetti-deteccion-de-fallos-en-tiempo-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Detección de "Spaghetti" (Detección de fallos en tiempo real)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-deteccion-de-objetos-extranos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Detección de Objetos Extraños
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-control-de-la-primera-capa-lidar-y-camara" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Control de la Primera Capa (Lidar y Cámara)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-creacion-de-contenido-didactico-time-lapse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Creación de Contenido Didáctico: Time-Lapse
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_materiales_proyectos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 4: Materiales y Aplicaciones Educativas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_postprocesado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 5: Post-procesado y Acabados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06_mantenimiento_troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 6: Mantenimiento y Resolución de Problemas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07_examen_cert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎓 Examen de Certificación: Operador Experto Creality K1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08_resumen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resumen de la Formación: Creality K1 en el Aula
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion-del-modelo-digital-a-la-realidad-fisica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introducción: Del modelo digital a la realidad física
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos-del-modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivos del Módulo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31-creality-print-configuracion-de-perfiles-y-optimizacion-de-capas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Creality Print: Configuración de perfiles y optimización de capas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1. Creality Print: Configuración de perfiles y optimización de capas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-interfaz-y-configuracion-de-la-impresora" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Interfaz y Configuración de la Impresora
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-perfiles-de-impresion-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Perfiles de Impresión (Presets)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-optimizacion-de-capas-el-concepto-de-capa-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Optimización de Capas: El concepto de "Capa Variable"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-preparacion-del-archivo-slicing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Preparación del Archivo (Slicing)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-parametros-esenciales-gestion-de-soportes-rellenos-y-flujo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Parámetros Esenciales: Gestión de soportes, rellenos y flujo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2. Parámetros Esenciales: Gestión de soportes, rellenos y flujo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-gestion-de-soportes-el-modelo-tree-arbol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Gestión de Soportes: El modelo "Tree" (Árbol)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-rellenos-infill-resistencia-vs-tiempo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Rellenos (Infill): Resistencia vs. Tiempo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-gestion-del-flujo-flow-y-velocidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Gestión del Flujo (Flow) y Velocidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-adherencia-a-la-placa-brim-y-raft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Adherencia a la placa (Brim y Raft)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-creality-cloud-acceso-a-bibliotecas-de-modelos-y-gestion-de-aula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Creality Cloud: Acceso a bibliotecas de modelos y gestión de aula
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Creality Cloud: Acceso a bibliotecas de modelos y gestión de aula">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-acceso-a-la-biblioteca-de-modelos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Acceso a la Biblioteca de Modelos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-gestion-de-impresion-remota-cloud-printing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Gestión de Impresión Remota (Cloud Printing)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-integracion-de-alumnos-gestion-de-aula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Integración de Alumnos (Gestión de Aula)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-creality-m1-e-impacto-ambiental" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Creality M1 e Impacto Ambiental
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-integracion-con-ia-uso-de-la-camara-para-supervision-y-funciones-inteligentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4. Integración con IA: Uso de la cámara para supervisión y funciones inteligentes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4. Integración con IA: Uso de la cámara para supervisión y funciones inteligentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-deteccion-de-spaghetti-deteccion-de-fallos-en-tiempo-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Detección de "Spaghetti" (Detección de fallos en tiempo real)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-deteccion-de-objetos-extranos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Detección de Objetos Extraños
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-control-de-la-primera-capa-lidar-y-camara" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Control de la Primera Capa (Lidar y Cámara)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-creacion-de-contenido-didactico-time-lapse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Creación de Contenido Didáctico: Time-Lapse
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+<h1 id="modulo-3-ecosistema-de-software-y-gestion-de-aula">Módulo 3: Ecosistema de Software y Gestión de Aula</h1>
+<p>Este módulo traslada el enfoque de la máquina física al entorno digital. El éxito de la <strong>Creality K1</strong> en el aula depende de una correcta preparación de los archivos y de la capacidad del docente para gestionar el flujo de trabajo de múltiples alumnos de forma eficiente.</p>
+<hr />
+<h2 id="introduccion-del-modelo-digital-a-la-realidad-fisica">Introducción: Del modelo digital a la realidad física</h2>
+<p>El ecosistema de software de la K1 está diseñado para ser un puente invisible. No se trata solo de "laminar" (convertir un diseño en instrucciones para la impresora), sino de controlar, supervisar y optimizar. En el entorno educativo, esto se traduce en tres pilares fundamentales:</p>
+<ol>
+<li><strong>Simplicidad Operativa:</strong> El software oficial (<strong>Creality Print</strong>) ya incluye perfiles optimizados. El docente no necesita ser un experto en parámetros de impresión; la inteligencia del software ya sabe cómo exprimir los 600 mm/s de la K1 con seguridad.</li>
+<li><strong>Gestión de Aula:</strong> Mediante la conectividad en red y la nube, el profesor puede recibir proyectos, revisar errores antes de imprimir y gestionar la cola de trabajo sin necesidad de desplazarse con tarjetas SD o pendrives.</li>
+<li><strong>Supervisión Inteligente:</strong> La integración de la IA y la cámara permite que el software actúe como un "asistente de taller", pausando la impresión si algo sale mal y notificando al docente en su escritorio.</li>
+</ol>
+<h2 id="objetivos-del-modulo">Objetivos del Módulo</h2>
+<ul>
+<li>Dominar la interfaz de <strong>Creality Print</strong> para preparar modelos en tiempo récord.</li>
+<li>Comprender los parámetros críticos que afectan a la velocidad y la calidad en proyectos escolares.</li>
+<li>Implementar un flujo de trabajo basado en la nube (<strong>Creality Cloud</strong>) para organizar las entregas del alumnado.</li>
+<li>Utilizar las herramientas de monitorización para maximizar la tasa de éxito de las impresiones.</li>
+</ul>
+<p><img alt="software" src="../img/software.png" />  </p>
+<hr />
+<blockquote>
+<p><strong>Nota para el docente:</strong> El software es donde realmente ahorramos tiempo. Una pieza mal laminada es una hora de clase perdida; una pieza bien configurada es un éxito rotundo que motiva al estudiante.</p>
+</blockquote>
+<h2 id="31-creality-print-configuracion-de-perfiles-y-optimizacion-de-capas">3.1. Creality Print: Configuración de perfiles y optimización de capas</h2>
+<p><strong>Creality Print</strong> es el software de laminación (<em>slicer</em>) oficial diseñado específicamente para extraer el máximo potencial de la K1. A diferencia de otros laminadores genéricos, este incluye perfiles de ingeniería optimizados que equilibran la velocidad de 600 mm/s con la integridad estructural de las piezas.</p>
+<p><img alt="conf" src="../img/conf.png" />  </p>
+<hr />
+<h4 id="a-interfaz-y-configuracion-de-la-impresora">A. Interfaz y Configuración de la Impresora</h4>
+<p>Al abrir el software por primera vez, el paso crítico es la selección correcta del modelo:</p>
+<ul>
+<li><strong>Selección de Máquina:</strong> Debe seleccionarse estrictamente el modelo <strong>K1</strong> (o K1 Max). Esto carga automáticamente las dimensiones de la cama (<span class="arithmatex">\(250 \times 250 \times 250\)</span> mm) y los límites de aceleración del sistema CoreXY.</li>
+</ul>
+<p><img alt="print" src="../img/print.png" />  </p>
+<ul>
+<li><strong>Gestión de Boquilla:</strong> El perfil estándar asume una boquilla de <strong>0.4 mm</strong>. Si para proyectos educativos de gran tamaño se decide cambiar a una boquilla de 0.6 mm o 0.8 mm, es imperativo cambiar el ajuste en el software para que el flujo de plástico sea coherente.</li>
+</ul>
+<p><img alt="tiempos" src="../img/tiempos.png" />  </p>
+<p><strong>Alturas de capa recomendadas según nozzle/boquilla</strong></p>
+<table>
+<thead>
+<tr>
+<th>Nozzle (mm)</th>
+<th>Altura mínima (≈25%)</th>
+<th>Altura óptima (≈50%)</th>
+<th>Altura máxima (≈75%)</th>
+<th>Uso típico</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.4</td>
+<td>0.10 mm</td>
+<td>0.20 mm</td>
+<td>0.30 mm</td>
+<td>Equilibrio calidad/tiempo</td>
+</tr>
+<tr>
+<td>0.6</td>
+<td>0.15 mm</td>
+<td>0.30 mm</td>
+<td>0.45 mm</td>
+<td>Piezas funcionales, más rapidez</td>
+</tr>
+<tr>
+<td>0.8</td>
+<td>0.20 mm</td>
+<td>0.40 mm</td>
+<td>0.60 mm</td>
+<td>Piezas grandes, muy rápido</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="nozzle" src="../img/nozzle.png" />  </p>
+<h4 id="b-perfiles-de-impresion-presets">B. Perfiles de Impresión (Presets)</h4>
+<p>El software ofrece tres niveles principales de calidad que el docente debe conocer para gestionar los tiempos de clase:</p>
+<ol>
+<li><strong>Normal (0.20 mm):</strong> El estándar para la mayoría de proyectos STEM. Ofrece el mejor equilibrio entre estética y velocidad.</li>
+<li><strong>High Quality (0.10 mm):</strong> Ideal para piezas con mucho detalle o encajes mecánicos precisos. Duplica el tiempo de impresión.</li>
+<li><strong>Fast / Draft (0.25 - 0.30 mm):</strong> Perfecto para prototipos rápidos donde la estética no es prioritaria. Es el perfil recomendado para "probar" ideas en una sola sesión lectiva.</li>
+</ol>
+<p><img alt="perfiles" src="../img/perfiles.png" />  </p>
+<h4 id="c-optimizacion-de-capas-el-concepto-de-capa-variable">C. Optimización de Capas: El concepto de "Capa Variable"</h4>
+<p>Una función avanzada pero accesible en Creality Print es la <strong>Altura de Capa Variable</strong>:</p>
+<ul>
+<li><strong>¿Cómo funciona?</strong> Permite que la impresora use capas gruesas (más rápidas) en las zonas rectas del modelo y capas finas (más precisas) en las zonas con curvas o detalles superiores.</li>
+<li><strong>Uso en el aula:</strong> Optimiza el tiempo total de impresión sin sacrificar el acabado en las partes críticas del diseño del alumno.</li>
+</ul>
+<p><img alt="variable" src="../img/variable.png" />  </p>
+<h4 id="d-preparacion-del-archivo-slicing">D. Preparación del Archivo (Slicing)</h4>
+<p>Una vez importado el modelo (en formato STL o 3MF), el proceso sigue este orden profesional:</p>
+<ol>
+<li><strong>Orientación:</strong> Colocar la cara más plana del objeto sobre la cama para maximizar la superficie de contacto.</li>
+<li><strong>Escalado:</strong> Ajustar el tamaño si la pieza excede el tiempo disponible de clase.</li>
+<li><strong>Laminado (Slice):</strong> Al pulsar este botón, el software genera el <strong>G-Code</strong>.</li>
+<li><strong>Vista Previa (Preview):</strong> <strong>Paso obligatorio para el docente.</strong> Permite ver capa por capa cómo se construirá la pieza, identificar posibles zonas de fallo y verificar el tiempo estimado de finalización.</li>
+</ol>
+<p><img alt="options" src="../img/options.png" />  </p>
+<hr />
+<blockquote>
+<p><strong>Tip Profesional:</strong> En la vista previa, observe el "Caudal" (Flow rate). La K1 brilla cuando el caudal se mantiene constante. Si ve zonas con cambios bruscos de velocidad, considere simplificar la geometría del modelo.</p>
+</blockquote>
+<h2 id="32-parametros-esenciales-gestion-de-soportes-rellenos-y-flujo">3.2. Parámetros Esenciales: Gestión de soportes, rellenos y flujo</h2>
+<p>Una vez seleccionado el perfil de calidad, el docente debe ajustar tres parámetros críticos que determinan si una pieza tendrá éxito, si será fácil de limpiar por el alumno y si se imprimirá dentro del tiempo de la clase.</p>
+<hr />
+<h4 id="a-gestion-de-soportes-el-modelo-tree-arbol">A. Gestión de Soportes: El modelo "Tree" (Árbol)</h4>
+<p>La K1 imprime muy bien en el aire gracias a su ventilación lateral, pero para ángulos superiores a 45-50° necesitamos soportes.</p>
+<p><img alt="support" src="../img/support.png" />  </p>
+<ul>
+<li><strong>Soportes Normales:</strong> Crean una estructura de rejilla bajo la pieza. Son estables pero difíciles de quitar y dejan marcas.</li>
+<li><strong>Soportes de Árbol (Tree Supports):</strong> <strong>Altamente recomendados para el aula.</strong> Crecen como ramas desde la placa de impresión hacia la pieza, tocándola mínimamente.<ul>
+<li><strong>Ventaja:</strong> Se retiran casi sin herramientas, ahorran hasta un 40% de material y reducen el tiempo de post-procesado del alumno.</li>
+</ul>
+</li>
+<li><strong>Ángulo de voladizo:</strong> Ajustar a <strong>55°</strong> para que la K1 trabaje más por sí sola y use menos soporte innecesario.</li>
+</ul>
+<p><img alt="arbol" src="../img/arbol.png" />  </p>
+<h4 id="b-rellenos-infill-resistencia-vs-tiempo">B. Rellenos (Infill): Resistencia vs. Tiempo</h4>
+<p>El relleno es la estructura interna de la pieza. En educación, el error común es usar rellenos muy altos.</p>
+<ul>
+<li><strong>Densidad:</strong> Un <strong>10-15%</strong> es suficiente para el 90% de los proyectos escolares.</li>
+<li><strong>Patrón Gyroid:</strong> Es el patrón más eficiente para la K1. Es fuerte en todas las direcciones y permite que el cabezal se mueva a alta velocidad sin chocar con las líneas de relleno previas (evitando el molesto ruido de "raspado").</li>
+<li><strong>Relación de tiempo:</strong> Pasar de un 20% a un 10% de relleno puede ahorrar 20 minutos en una impresión de una hora.</li>
+</ul>
+<p><img alt="infill" src="../img/infill.png" />  </p>
+<h4 id="c-gestion-del-flujo-flow-y-velocidad">C. Gestión del Flujo (Flow) y Velocidad</h4>
+<p>La K1 gestiona el flujo de forma inteligente, pero el docente debe supervisar dos aspectos:</p>
+<ul>
+<li><strong>Paredes (Walls):</strong> Usar <strong>2 o 3 perímetros</strong>. Es más efectivo para la resistencia que subir el relleno.</li>
+<li><strong>Velocidad de la primera capa:</strong> Aunque la K1 imprime a 600 mm/s, la primera capa debe ir a <strong>30-50 mm/s</strong>. Creality Print lo gestiona solo, pero es vital no "forzar" la velocidad en la base para asegurar la adherencia.</li>
+</ul>
+<h4 id="d-adherencia-a-la-placa-brim-y-raft">D. Adherencia a la placa (Brim y Raft)</h4>
+<ul>
+<li><strong>Brim (Borde):</strong> Una capa fina que rodea la base de la pieza. <strong>Uso obligado</strong> en piezas altas y estrechas para evitar que la inercia de la alta velocidad las tire.</li>
+<li><strong>Raft (Balsa):</strong> Solo necesario si la base del diseño del alumno es muy irregular. En la K1, gracias a la nivelación automática, el Raft casi nunca es necesario, lo que ahorra mucho material.</li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Estrategia para el aula:</strong> Enseñe a los alumnos que "más relleno no siempre es mejor". Un diseño inteligente con soportes de árbol y 3 paredes es más rápido de imprimir y más profesional que un bloque macizo de plástico.</p>
+</blockquote>
+<h2 id="33-creality-cloud-acceso-a-bibliotecas-de-modelos-y-gestion-de-aula">3.3. Creality Cloud: Acceso a bibliotecas de modelos y gestión de aula</h2>
+<p><strong>Creality Cloud</strong> no es solo un repositorio de archivos; es la plataforma que permite al docente centralizar el trabajo de los alumnos, eliminando el trasiego de tarjetas SD y facilitando la búsqueda de recursos educativos listos para imprimir.</p>
+<hr />
+<h4 id="a-acceso-a-la-biblioteca-de-modelos">A. Acceso a la Biblioteca de Modelos</h4>
+<p>En lugar de diseñar todo desde cero, el docente puede aprovechar miles de recursos ya optimizados:</p>
+<ul>
+<li><strong>Buscador Integrado:</strong> Acceso directo desde el navegador o la App a modelos categorizados (Ciencias, Ingeniería, Arte).</li>
+<li><strong>Modelos "Ready-to-Print":</strong> Muchos archivos ya incluyen perfiles de laminación probados por otros usuarios para la K1, lo que reduce el margen de error para el profesor novato.</li>
+<li><strong>Colecciones Educativas:</strong> Permite guardar modelos en carpetas personalizadas (ej. "Proyecto Geometría 1º ESO") para tenerlos disponibles en cualquier momento.</li>
+</ul>
+<h4 id="b-gestion-de-impresion-remota-cloud-printing">B. Gestión de Impresión Remota (Cloud Printing)</h4>
+<p>Esta es la herramienta clave para la organización del centro educativo:</p>
+<ul>
+<li><strong>Carga desde el móvil o PC:</strong> El docente puede seleccionar un modelo en la nube y enviarlo directamente a la K1 sin necesidad de cables.</li>
+<li><strong>Cola de impresión:</strong> Si la impresora está ocupada, los archivos pueden quedar en espera.</li>
+<li><strong>Control multi-máquina:</strong> Si el centro dispone de varias K1, desde un solo panel de Creality Cloud se puede decidir en qué máquina imprimir cada proyecto de los alumnos.</li>
+</ul>
+<h4 id="c-integracion-de-alumnos-gestion-de-aula">C. Integración de Alumnos (Gestión de Aula)</h4>
+<p>Para un flujo de trabajo profesional, se recomienda:</p>
+<ol>
+<li><strong>Cuentas compartidas:</strong> Crear una cuenta de centro donde los alumnos suban sus diseños (formatos STL o 3MF).</li>
+<li><strong>Validación del profesor:</strong> El docente revisa los modelos en la nube, verifica que el tiempo de impresión sea adecuado y autoriza el inicio de la tarea.</li>
+<li><strong>Notificaciones:</strong> El sistema avisa al móvil del docente cuando la impresión ha finalizado o si la IA ha detectado un error.</li>
+</ol>
+<h4 id="d-creality-m1-e-impacto-ambiental">D. Creality M1 e Impacto Ambiental</h4>
+<p>En la plataforma también se promueven prácticas de <strong>sostenibilidad</strong>:</p>
+<ul>
+<li><strong>Optimización de material:</strong> Uso de previsualizaciones precisas para evitar impresiones fallidas.</li>
+<li><strong>Proyectos de reciclaje:</strong> Acceso a modelos específicos para ser impresos con filamento reciclado (conectando con el ecosistema de la recicladora Creality M1).</li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Ventaja Estratégica:</strong> Usar la nube permite que la impresora esté en un aula o taller dedicado, mientras el profesor gestiona y supervisa las colas de trabajo desde la sala de profesores o su propio aula de teoría.</p>
+</blockquote>
+<h2 id="34-integracion-con-ia-uso-de-la-camara-para-supervision-y-funciones-inteligentes">3.4. Integración con IA: Uso de la cámara para supervisión y funciones inteligentes</h2>
+<p>La integración de la inteligencia artificial (IA) en la Creality K1 no es una función meramente estética; es una herramienta de <strong>gestión de riesgos</strong> y <strong>eficiencia operativa</strong> para el docente. En este apartado, veremos cómo la cámara se convierte en un asistente que vigila la impresora mientras usted atiende a sus alumnos.</p>
+<hr />
+<h4 id="a-deteccion-de-spaghetti-deteccion-de-fallos-en-tiempo-real">A. Detección de "Spaghetti" (Detección de fallos en tiempo real)</h4>
+<p>Es el error más común: una pieza se despega de la base y el extrusor sigue soltando filamento, creando una masa informe de hilos.</p>
+<ul>
+<li><strong>Funcionamiento:</strong> La IA analiza la imagen de la cámara constantemente. Si detecta patrones que coinciden con una impresión fallida, la máquina se <strong>pausa automáticamente</strong>.</li>
+<li><strong>Valor educativo:</strong> Evita el desperdicio de metros de filamento y protege el cabezal de impresión de quedar atrapado en una bola de plástico fundido, facilitando la limpieza inmediata y el reinicio de la clase.</li>
+</ul>
+<h4 id="b-deteccion-de-objetos-extranos">B. Detección de Objetos Extraños</h4>
+<p>Antes de comenzar cualquier impresión, la cámara realiza un escaneo de la superficie de la placa PEI.</p>
+<ul>
+<li><strong>Prevención de daños:</strong> Si la IA detecta que hay una pieza de la clase anterior que no se ha retirado, o una herramienta olvidada, <strong>impedirá el inicio del movimiento</strong>.</li>
+<li><strong>Importancia en el aula:</strong> Protege la integridad mecánica de la K1 (especialmente la boquilla y los motores del eje Z) frente a descuidos humanos habituales en entornos con muchos usuarios.</li>
+</ul>
+<h4 id="c-control-de-la-primera-capa-lidar-y-camara">C. Control de la Primera Capa (Lidar y Cámara)</h4>
+<p>En el modelo K1 Max o mediante la actualización de la cámara en la K1 estándar, el sistema puede verificar la calidad de la primera capa.</p>
+<ul>
+<li><strong>Validación técnica:</strong> La IA "mira" si el plástico está bien adherido y si el flujo es el correcto. Si detecta que la base está mal configurada, avisa al docente en los primeros minutos.</li>
+<li><strong>Ventaja:</strong> El 90% de los fallos ocurren en la primera capa. Saber que la base es sólida permite al docente desviar su atención a otras tareas con total tranquilidad.</li>
+</ul>
+<h4 id="d-creacion-de-contenido-didactico-time-lapse">D. Creación de Contenido Didáctico: Time-Lapse</h4>
+<p>La cámara graba automáticamente el proceso de construcción, comprimiendo horas de trabajo en pocos segundos.</p>
+<ul>
+<li><strong>Uso en proyectos:</strong> Los alumnos pueden integrar estos videos en sus memorias de prácticas o presentaciones, mostrando visualmente cómo el diseño digital se materializa.</li>
+<li><strong>Análisis de errores:</strong> Si una pieza se rompe a mitad de camino, el docente puede revisar el video para entender si fue un error de diseño (paredes muy finas) o un problema térmico.</li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Configuración Práctica:</strong> Asegúrese de activar las notificaciones en el software <strong>Creality Print</strong> o la <strong>App Creality Cloud</strong>. De este modo, si la IA detecta un fallo, su teléfono o ordenador emitirá una alerta sonora, permitiéndole actuar sin estar físicamente frente a la máquina.</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../02_modelos/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Módulo 2: Diseño y Obtención de Modelos 3D">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Módulo 2: Diseño y Obtención de Modelos 3D
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../04_materiales_proyectos/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Módulo 4: Materiales y Aplicaciones Educativas">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Módulo 4: Materiales y Aplicaciones Educativas
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 The authors
+
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.path","navigation.sections","navigation.top","navigation.tracking","search.highlight"],"search":"../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copiado al portapapeles","clipboard.copy":"Copiar al portapapeles","search.result.more.one":"1 más en esta página","search.result.more.other":"# más en esta página","search.result.none":"No se encontraron documentos","search.result.one":"1 documento encontrado","search.result.other":"# documentos encontrados","search.result.placeholder":"Teclee para comenzar búsqueda","search.result.term.missing":"Falta","select.version":"Seleccionar versión"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.91a19a9e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1298 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A new project generated from the default template project.">
+      
+      
+        <meta name="author" content="<your name here>">
+      
+      
+      
+        <link rel="prev" href="../03_software_ecosistema/">
+      
+      
+        <link rel="next" href="../05_postprocesado/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.32">
+    
+    
+      
+        <title>Módulo 4: Materiales y Aplicaciones Educativas - Impresión FDM</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.53a7feaf.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="Navegación"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modulo-4-materiales-y-aplicaciones-educativas" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="./.." title="Impresión FDM" class="md-header__button md-logo" aria-label="Impresión FDM" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navegación">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Impresión FDM
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Módulo 4: Materiales y Aplicaciones Educativas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Buscar">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Buscar">
+  <button type="button" class="md-search__button">
+    Buscar
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="Impresión FDM" class="md-nav__button md-logo" aria-label="Impresión FDM" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    Impresión FDM
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Curso de impresión FDM con Creality K1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_hardware_k1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📑 Módulo 1: Impresión FDM y Hardware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_modelos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 2: Diseño y Obtención de Modelos 3D
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_software_ecosistema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 3: Ecosistema de Software y Gestión de Aula
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 4: Materiales y Aplicaciones Educativas
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 4: Materiales y Aplicaciones Educativas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion-del-filamento-al-aprendizaje-significativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introducción: Del filamento al aprendizaje significativo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos-del-modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivos del Módulo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41-tipos-de-filamento-que-material-elegir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Tipos de Filamento: ¿Qué material elegir?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1. Tipos de Filamento: ¿Qué material elegir?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-pla-acido-polilactico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. PLA (Ácido Poliláctico)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-petg-tereftalato-de-polietileno-glicol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. PETG (Tereftalato de Polietileno Glicol)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-abs-acrilonitrilo-butadieno-estireno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. ABS (Acrilonitrilo Butadieno Estireno)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-tpu-poliuretano-termoplastico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. TPU (Poliuretano Termoplástico)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="D. TPU (Poliuretano Termoplástico)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#d-gestion-de-la-humedad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Gestión de la humedad
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-proyectos-stem-aplicaciones-en-educacion-medicina-y-vida-diaria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. Proyectos STEM: Aplicaciones en educación, medicina y vida diaria
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2. Proyectos STEM: Aplicaciones en educación, medicina y vida diaria">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-aplicaciones-en-educacion-y-ciencias-stem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Aplicaciones en Educación y Ciencias (STEM)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-medicina-y-biologia-modelado-realista" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Medicina y Biología: Modelado Realista
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-vida-diaria-y-resolucion-de-problemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Vida Diaria y Resolución de Problemas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-flujo-de-diseno-colaborativo-onshape" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Flujo de Diseño Colaborativo (Onshape)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-sostenibilidad-introduccion-al-sistema-de-reciclado-de-filamento-creality-m1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3. Sostenibilidad: Introducción al sistema de reciclado de filamento Creality M1
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3. Sostenibilidad: Introducción al sistema de reciclado de filamento Creality M1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-de-residuo-a-recurso-el-concepto-zero-waste" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. De Residuo a Recurso: El concepto "Zero Waste"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-funcionamiento-del-ecosistema-m1-r1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Funcionamiento del Ecosistema M1 &amp; R1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-valor-educativo-y-concienciacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Valor Educativo y Concienciación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-mejores-practicas-para-el-reciclaje-en-el-aula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Mejores Prácticas para el Reciclaje en el Aula
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_postprocesado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 5: Post-procesado y Acabados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06_mantenimiento_troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 6: Mantenimiento y Resolución de Problemas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07_examen_cert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎓 Examen de Certificación: Operador Experto Creality K1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08_resumen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resumen de la Formación: Creality K1 en el Aula
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion-del-filamento-al-aprendizaje-significativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introducción: Del filamento al aprendizaje significativo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos-del-modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivos del Módulo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41-tipos-de-filamento-que-material-elegir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Tipos de Filamento: ¿Qué material elegir?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1. Tipos de Filamento: ¿Qué material elegir?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-pla-acido-polilactico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. PLA (Ácido Poliláctico)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-petg-tereftalato-de-polietileno-glicol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. PETG (Tereftalato de Polietileno Glicol)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-abs-acrilonitrilo-butadieno-estireno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. ABS (Acrilonitrilo Butadieno Estireno)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-tpu-poliuretano-termoplastico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. TPU (Poliuretano Termoplástico)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="D. TPU (Poliuretano Termoplástico)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#d-gestion-de-la-humedad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Gestión de la humedad
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-proyectos-stem-aplicaciones-en-educacion-medicina-y-vida-diaria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. Proyectos STEM: Aplicaciones en educación, medicina y vida diaria
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2. Proyectos STEM: Aplicaciones en educación, medicina y vida diaria">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-aplicaciones-en-educacion-y-ciencias-stem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Aplicaciones en Educación y Ciencias (STEM)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-medicina-y-biologia-modelado-realista" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Medicina y Biología: Modelado Realista
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-vida-diaria-y-resolucion-de-problemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Vida Diaria y Resolución de Problemas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-flujo-de-diseno-colaborativo-onshape" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Flujo de Diseño Colaborativo (Onshape)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-sostenibilidad-introduccion-al-sistema-de-reciclado-de-filamento-creality-m1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3. Sostenibilidad: Introducción al sistema de reciclado de filamento Creality M1
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3. Sostenibilidad: Introducción al sistema de reciclado de filamento Creality M1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-de-residuo-a-recurso-el-concepto-zero-waste" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. De Residuo a Recurso: El concepto "Zero Waste"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-funcionamiento-del-ecosistema-m1-r1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Funcionamiento del Ecosistema M1 &amp; R1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-valor-educativo-y-concienciacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Valor Educativo y Concienciación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-mejores-practicas-para-el-reciclaje-en-el-aula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Mejores Prácticas para el Reciclaje en el Aula
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+<h1 id="modulo-4-materiales-y-aplicaciones-educativas">Módulo 4: Materiales y Aplicaciones Educativas</h1>
+<p>Este módulo constituye el núcleo pedagógico del curso. Una vez dominada la técnica y el software, el objetivo es entender cómo la <strong>Creality K1</strong> se convierte en una factoría de soluciones para el centro educativo, optimizando el uso de recursos y fomentando la cultura de la sostenibilidad.</p>
+<hr />
+<h2 id="introduccion-del-filamento-al-aprendizaje-significativo">Introducción: Del filamento al aprendizaje significativo</h2>
+<p>En el contexto escolar, la elección del material y el propósito del objeto impreso definen el éxito de la actividad docente. La Creality K1, gracias a su velocidad y ecosistema, permite que el ciclo de <strong>"Diseñar-Imprimir-Validar"</strong> ocurra con una agilidad nunca antes vista en las aulas.</p>
+<p>Este bloque está diseñado para que el docente pueda:</p>
+<ol>
+<li><strong>Seleccionar con criterio:</strong> No todos los proyectos requieren el mismo plástico. Aprenderemos a distinguir cuándo usar los diferentes filamentos para maximizar la velocidad y cuándo recurrir a materiales técnicos o estéticos.</li>
+<li><strong>Materializar el currículo:</strong> Exploraremos cómo la impresión 3D deja de ser una actividad aislada para convertirse en un recurso transversal en asignaturas como Tecnología, Biología, Historia o Matemáticas (STEM).</li>
+<li><strong>Educar en la economía circular:</strong> La fabricación aditiva genera residuos (soportes, pruebas fallidas). Introduciremos el concepto de <strong>sostenibilidad activa</strong> mediante el sistema de reciclado <strong>Creality M1</strong>, cerrando el ciclo del plástico en el propio centro.</li>
+</ol>
+<h2 id="objetivos-del-modulo">Objetivos del Módulo</h2>
+<ul>
+<li>Identificar las propiedades de los distintos filamentos compatibles con la alta velocidad.</li>
+<li>Diseñar estrategias para integrar la impresión 3D en proyectos de medicina, ingeniería y vida diaria.</li>
+<li>Comprender el flujo de reciclaje de restos de impresión para reducir el impacto ambiental y los costes del aula.</li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Reflexión para el profesorado:</strong> El material no es solo el consumible; es el soporte físico del conocimiento del alumno. Elegir el adecuado garantiza que el prototipo sea funcional y duradero.</p>
+</blockquote>
+<h2 id="41-tipos-de-filamento-que-material-elegir">4.1. Tipos de Filamento: ¿Qué material elegir?</h2>
+<p>En la <strong>Creality K1</strong>, la elección del filamento no es solo una cuestión de color, sino de química. Para imprimir a 600 mm/s, el material debe ser capaz de fundirse y enfriarse de forma casi instantánea. La <strong>Creality K1</strong> es una máquina versátil gracias a su extrusor directo y su cámara cerrada. Estos son los materiales más utilizados en el aula:</p>
+<p><img alt="pla" src="../img/pla.png" />  </p>
+<h3 id="a-pla-acido-polilactico">A. PLA (Ácido Poliláctico)</h3>
+<p>Es el estándar educativo por excelencia.</p>
+<ul>
+<li><strong>Uso:</strong> Prototipos, maquetas, figuras y piezas que no deban soportar calor.</li>
+<li><strong>Ventajas:</strong> El más fácil de imprimir, no huele, es biodegradable y no necesita cama muy caliente.</li>
+<li><strong>Punto débil:</strong> Se deforma a partir de los <strong>50-60°C</strong> (no lo olvides dentro de un coche al sol).</li>
+</ul>
+<h3 id="b-petg-tereftalato-de-polietileno-glicol">B. PETG (Tereftalato de Polietileno Glicol)</h3>
+<p>El "hermano resistente" del PLA (es el plástico de las botellas de agua).</p>
+<ul>
+<li><strong>Uso:</strong> Piezas mecánicas, soportes que deban estar en el exterior o piezas con cierta flexibilidad.</li>
+<li><strong>Ventajas:</strong> Mucho más resistente a los impactos y a la temperatura que el PLA.</li>
+<li><strong>Punto débil:</strong> Es un poco más "pegajoso" (puede dejar hilos o <em>stringing</em>) y requiere temperaturas de boquilla más altas (<span class="arithmatex">\(230-250°C\)</span>).</li>
+</ul>
+<h3 id="c-abs-acrilonitrilo-butadieno-estireno">C. ABS (Acrilonitrilo Butadieno Estireno)</h3>
+<p>El material de las piezas de LEGO.</p>
+<ul>
+<li><strong>Uso:</strong> Piezas técnicas de alta resistencia y que deban soportar mucho calor.</li>
+<li><strong>Ventajas:</strong> Muy duradero y se puede lijar/mecanizar fácilmente.</li>
+<li><strong>Punto débil:</strong> Suelta gases nocivos al fundirse y tiende a despegarse de la base (<em>warping</em>). <ul>
+<li><em>Nota para la K1:</em> Gracias a que la K1 es cerrada, el ABS se imprime mucho mejor, pero <strong>siempre se debe usar el filtro de carbón activo y ventilar el aula</strong>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="d-tpu-poliuretano-termoplastico">D. TPU (Poliuretano Termoplástico)</h3>
+<ul>
+<li><strong>Uso:</strong> Neumáticos de robótica, carcasas de móvil o juntas elásticas.</li>
+<li><strong>Ventajas:</strong> Es <strong>flexible</strong> (como goma).</li>
+<li><strong>Punto débil:</strong> Se debe imprimir muy lento. El extrusor directo de la K1 es excelente para este material, evitando que el filamento se enrede.</li>
+</ul>
+<hr />
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Material</th>
+<th style="text-align: left;">Dificultad</th>
+<th style="text-align: left;">Temperatura Boquilla</th>
+<th style="text-align: left;">Temperatura Cama</th>
+<th style="text-align: left;">¿Usa Ventilador?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>PLA</strong></td>
+<td style="text-align: left;">🟢 Baja</td>
+<td style="text-align: left;"><span class="arithmatex">\(190-220°C\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(45-60°C\)</span></td>
+<td style="text-align: left;">Sí (100%)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>PETG</strong></td>
+<td style="text-align: left;">🟡 Media</td>
+<td style="text-align: left;"><span class="arithmatex">\(230-250°C\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(70-80°C\)</span></td>
+<td style="text-align: left;">Sí (30-50%)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>ABS</strong></td>
+<td style="text-align: left;">🔴 Alta</td>
+<td style="text-align: left;"><span class="arithmatex">\(240-260°C\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(90-110°C\)</span></td>
+<td style="text-align: left;">No / Muy poco</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>TPU</strong></td>
+<td style="text-align: left;">🟡 Media</td>
+<td style="text-align: left;"><span class="arithmatex">\(220-240°C\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(30-50°C\)</span></td>
+<td style="text-align: left;">Sí (20-30%)</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="filamento" src="../img/filamento.png" />  </p>
+<hr />
+<blockquote>
+<p><strong>Consejo Docente:</strong> Para el 90% de los proyectos escolares, el <strong>PLA</strong> es la mejor opción por seguridad y tasa de éxito. Reserva el <strong>PETG</strong> para proyectos de tecnología donde las piezas deban "trabajar" mecánicamente.</p>
+</blockquote>
+<h4 id="d-gestion-de-la-humedad">D. Gestión de la humedad</h4>
+<p>El filamento es higroscópico (absorbe agua del aire). En un centro educativo, un filamento húmedo provocará burbujas y fallos de impresión.</p>
+<ul>
+<li><strong>Almacenamiento:</strong> Guardar las bobinas en bolsas herméticas con gel de sílice cuando no se usen.</li>
+<li><strong>Síntomas de humedad:</strong> Chasquidos al imprimir o acabado rugoso en la superficie de la pieza.</li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Consejo Directo:</strong> El filamento PLA es el que menos humedad absorbe, pero si se almacena mal (en un aula sin control de clima), incluso el PLA puede degradarse. Es recomendable revisar las bobinas antes de cada proyecto importante.</p>
+</blockquote>
+<h2 id="42-proyectos-stem-aplicaciones-en-educacion-medicina-y-vida-diaria">4.2. Proyectos STEM: Aplicaciones en educación, medicina y vida diaria</h2>
+<p>La alta velocidad de la Creality K1 (600 mm/s) transforma la impresora de ser un "escaparate" a ser una herramienta de producción real en el aula. Lo que antes requería dejar la máquina encendida toda la noche, ahora puede suceder durante una sesión doble de clase.</p>
+<hr />
+<h4 id="a-aplicaciones-en-educacion-y-ciencias-stem">A. Aplicaciones en Educación y Ciencias (STEM)</h4>
+<ul>
+<li><strong>Matemáticas y Geometría:</strong> Visualización de cuerpos geométricos complejos, fractales o funciones topológicas. Los alumnos pueden diseñar e imprimir sus propios manipulativos para entender volúmenes y áreas.</li>
+<li><strong>Física e Ingeniería:</strong> Impresión de componentes para robótica (engranajes, poleas, chasis de vehículos). La precisión de la K1 permite que las piezas mecánicas encajen con tolerancias profesionales.</li>
+<li><strong>Historia y Patrimonio:</strong> Reproducción de artefactos arqueológicos o maquetas de edificios históricos a partir de escaneos 3D, permitiendo que los alumnos interactúen con la historia de forma táctil.</li>
+</ul>
+<p><img alt="edificio" src="../img/edificio.png" />  </p>
+<h4 id="b-medicina-y-biologia-modelado-realista">B. Medicina y Biología: Modelado Realista</h4>
+<p>Gracias a la capacidad de la K1 para manejar detalles finos, se pueden abordar proyectos de salud:
+* <strong>Anatomía:</strong> Impresión de réplicas de huesos o modelos de órganos (corazón, pulmones) basados en datos de resonancias reales. Esto facilita la comprensión de la escala y la complejidad biológica.
+* <strong>Prótesis de bajo coste:</strong> Colaboración con proyectos sociales para imprimir prótesis de manos funcionales. La resistencia del <strong>Hyper PLA</strong> y la fiabilidad de la K1 la hacen ideal para estas aplicaciones de impacto social.</p>
+<p><img alt="hueso" src="../img/hueso.png" />  </p>
+<h4 id="c-vida-diaria-y-resolucion-de-problemas">C. Vida Diaria y Resolución de Problemas</h4>
+<p>El enfoque "Maker" enseña a los alumnos a detectar necesidades en su entorno:</p>
+<ul>
+<li><strong>Organizadores y Útiles:</strong> Diseño de soportes para material de laboratorio, organizadores de escritorio personalizados o carcasas para proteger placas electrónicas (Arduino/Raspberry Pi).</li>
+<li><strong>Reparaciones:</strong> Fomentar la sostenibilidad mediante la impresión de piezas de repuesto para objetos rotos del centro (pomos de puertas, clips de pizarras), reduciendo el desperdicio.</li>
+</ul>
+<h4 id="d-flujo-de-diseno-colaborativo-onshape">D. Flujo de Diseño Colaborativo (Onshape)</h4>
+<p>Para maximizar estos proyectos, se recomienda integrar la K1 con plataformas de diseño en la nube como <strong>Onshape</strong>:</p>
+<ul>
+<li><strong>Trabajo en Equipo:</strong> Los alumnos pueden colaborar en el mismo diseño desde diferentes dispositivos (incluso tablets).</li>
+<li><strong>Integración Directa:</strong> Una vez finalizado el diseño en Onshape, se exporta a <strong>Creality Print</strong> para su fabricación inmediata en la K1.</li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Idea para el Aula:</strong> Organice un "Reto de Diseño de 60 Minutos". Dado que la K1 es extremadamente rápida, los alumnos pueden diseñar un objeto pequeño, imprimirlo y probarlo dentro de la misma clase, permitiendo un ciclo de aprendizaje de "prueba y error" en tiempo real.</p>
+</blockquote>
+<h2 id="43-sostenibilidad-introduccion-al-sistema-de-reciclado-de-filamento-creality-m1">4.3. Sostenibilidad: Introducción al sistema de reciclado de filamento Creality M1</h2>
+<p>En un entorno educativo donde se generan múltiples prototipos, pruebas y soportes descartados, la gestión de residuos es una oportunidad pedagógica para enseñar economía circular. El ecosistema <strong>Creality M1</strong> se integra como la solución para cerrar el ciclo del plástico en el aula.</p>
+<hr />
+<h4 id="a-de-residuo-a-recurso-el-concepto-zero-waste">A. De Residuo a Recurso: El concepto "Zero Waste"</h4>
+<p>Tradicionalmente, las impresiones fallidas o los soportes de las piezas terminaban en el contenedor de basura. Con el sistema de reciclado, el centro educativo puede implementar un protocolo de recuperación:</p>
+<ul>
+<li><strong>Recolección:</strong> Clasificación de restos de <strong>PLA</strong> (el material más común en escuelas) en contenedores específicos.</li>
+<li><strong>Transformación:</strong> El sistema Creality M1 permite procesar estos restos para convertirlos de nuevo en bobinas de filamento utilizables por la K1.</li>
+</ul>
+<p><img alt="hilos" src="../img/hilos.png" />  </p>
+<h4 id="b-funcionamiento-del-ecosistema-m1-r1">B. Funcionamiento del Ecosistema M1 &amp; R1</h4>
+<p>Para que el reciclaje sea efectivo, el proceso se divide en etapas técnicas sencillas:</p>
+<ol>
+<li><strong>Triturado (Grinder):</strong> Los fallos de impresión y soportes se introducen en una trituradora que los convierte en "pellets" o pequeñas virutas de plástico.</li>
+<li><strong>Extrusión (M1):</strong> Estas virutas se funden y se extruyen a través de una boquilla de precisión para crear un hilo de diámetro constante (1.75 mm).</li>
+<li><strong>Bobinado (R1):</strong> Un sistema sincronizado enrolla el nuevo filamento en una bobina vacía, listo para volver a ser cargado en la Creality K1.</li>
+</ol>
+<p><img alt="m1" src="../img/m1.png" />  </p>
+<h4 id="c-valor-educativo-y-concienciacion">C. Valor Educativo y Concienciación</h4>
+<p>Integrar este sistema en el proyecto curricular permite trabajar competencias transversales:</p>
+<ul>
+<li><strong>Responsabilidad Ambiental:</strong> Los alumnos ven de primera mano el impacto de sus diseños y aprenden que el plástico es un recurso valioso, no un desperdicio.</li>
+<li><strong>Ciencia de Materiales:</strong> Comprensión de las propiedades térmicas de los polímeros y cómo la degradación térmica afecta al número de veces que un plástico puede reciclarse.</li>
+<li><strong>Optimización de Recursos:</strong> Análisis del ahorro de costes para el centro educativo al reducir la compra de bobinas vírgenes.</li>
+</ul>
+<h4 id="d-mejores-practicas-para-el-reciclaje-en-el-aula">D. Mejores Prácticas para el Reciclaje en el Aula</h4>
+<ul>
+<li><strong>Pureza del material:</strong> Es vital no mezclar tipos de plástico (ej. no mezclar PLA con PETG o TPU), ya que contaminaría el nuevo filamento y causaría atascos en la K1.</li>
+<li><strong>Limpieza:</strong> Asegurarse de que los restos no tengan restos de pegamento, pintura o grasa de manos para garantizar la calidad de la nueva bobina.</li>
+<li><strong>Mezcla de colores:</strong> Una actividad creativa interesante es mezclar restos de diferentes colores para obtener filamentos con tonalidades únicas o marmoleadas.</li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Reflexión para el centro:</strong> Implementar una "Estación de Reciclado" junto a la K1 convierte el aula de tecnología en un laboratorio de fabricación sostenible real, alineado con los Objetivos de Desarrollo Sostenible (ODS).</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../03_software_ecosistema/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Módulo 3: Ecosistema de Software y Gestión de Aula">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Módulo 3: Ecosistema de Software y Gestión de Aula
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../05_postprocesado/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Módulo 5: Post-procesado y Acabados">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Módulo 5: Post-procesado y Acabados
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 The authors
+
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.path","navigation.sections","navigation.top","navigation.tracking","search.highlight"],"search":"../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copiado al portapapeles","clipboard.copy":"Copiar al portapapeles","search.result.more.one":"1 más en esta página","search.result.more.other":"# más en esta página","search.result.none":"No se encontraron documentos","search.result.one":"1 documento encontrado","search.result.other":"# documentos encontrados","search.result.placeholder":"Teclee para comenzar búsqueda","search.result.term.missing":"Falta","select.version":"Seleccionar versión"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.91a19a9e.min.js"></script>
+      
+    
+  </body>
+</html>

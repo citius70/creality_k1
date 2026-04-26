@@ -1,0 +1,1512 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A new project generated from the default template project.">
+      
+      
+        <meta name="author" content="<your name here>">
+      
+      
+      
+        <link rel="prev" href="../04_materiales_proyectos/">
+      
+      
+        <link rel="next" href="../05_postprocesado/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.32">
+    
+    
+      
+        <title>Módulo 5: Mantenimiento y Resolución de Problemas - Impresión FDM</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.53a7feaf.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="Navegación"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modulo-5-mantenimiento-y-resolucion-de-problemas" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="./.." title="Impresión FDM" class="md-header__button md-logo" aria-label="Impresión FDM" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navegación">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Impresión FDM
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Módulo 5: Mantenimiento y Resolución de Problemas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Buscar">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Buscar">
+  <button type="button" class="md-search__button">
+    Buscar
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="Impresión FDM" class="md-nav__button md-logo" aria-label="Impresión FDM" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    Impresión FDM
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Curso de impresión FDM con Creality K1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_hardware_k1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📑 Módulo 1: Impresión FDM y Hardware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_modelos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 2: Diseño y Obtención de Modelos 3D
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_software_ecosistema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 3: Ecosistema de Software y Gestión de Aula
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_materiales_proyectos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 4: Materiales y Aplicaciones Educativas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 5: Mantenimiento y Resolución de Problemas
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 5: Mantenimiento y Resolución de Problemas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion-la-cultura-del-cuidado-tecnico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introducción: La cultura del cuidado técnico
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos-del-modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivos del Módulo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51-mantenimiento-preventivo-ejes-lubricacion-y-boquilla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1. Mantenimiento Preventivo: Ejes, lubricación y boquilla
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1. Mantenimiento Preventivo: Ejes, lubricación y boquilla">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-limpieza-y-lubricacion-de-los-ejes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Limpieza y Lubricación de los Ejes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-mantenimiento-del-hotend-y-la-boquilla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Mantenimiento del Hotend y la Boquilla
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-limpieza-de-la-placa-de-construccion-pei" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Limpieza de la Placa de Construcción (PEI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-inspeccion-de-ventiladores-y-correas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Inspección de Ventiladores y Correas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-solucion-de-problemas-comunes-atascos-nivelacion-y-extrusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2. Solución de Problemas Comunes: Atascos, nivelación y extrusión
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2. Solución de Problemas Comunes: Atascos, nivelación y extrusión">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-atascos-en-el-extrusor-clogging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Atascos en el Extrusor (Clogging)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-problemas-de-adherencia-y-nivelacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Problemas de Adherencia y Nivelación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-errores-de-la-ia-y-sensores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Errores de la IA y Sensores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-calibracion-de-input-shaping-vibraciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Calibración de Input Shaping (Vibraciones)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabla-de-diagnostico-rapido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla de Diagnóstico Rápido
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53-actualizaciones-de-firmware-y-conectividad-manteniendo-la-k1-al-dia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3. Actualizaciones de Firmware y Conectividad: Manteniendo la K1 al día
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3. Actualizaciones de Firmware y Conectividad: Manteniendo la K1 al día">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-por-que-es-critico-actualizar-el-firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. ¿Por qué es crítico actualizar el Firmware?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-metodos-de-actualizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Métodos de Actualización
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-gestion-de-la-red-escolar-wi-fi-y-lan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Gestión de la Red Escolar (Wi-Fi y LAN)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-seguridad-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Seguridad de Datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#54-calendario-de-revisiones-tecnicas-organizacion-del-taller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4. Calendario de Revisiones Técnicas: Organización del taller
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.4. Calendario de Revisiones Técnicas: Organización del taller">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-rutina-diaria-responsabilidad-del-alumnousuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Rutina Diaria (Responsabilidad del Alumno/Usuario)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-revision-mensual-responsabilidad-del-docente-o-encargado-de-taller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Revisión Mensual (Responsabilidad del Docente o Encargado de Taller)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-mantenimiento-trimestral-semestral-puesta-a-punto-profunda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Mantenimiento Trimestral / Semestral (Puesta a punto profunda)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-cuadro-de-mantenimiento-para-el-aula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo de Cuadro de Mantenimiento para el Aula
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_postprocesado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 5: Post-procesado y Acabados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06_resumen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resumen de la Formación: Creality K1 en el Aula
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07_examen_cert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎓 Examen de Certificación: Operador Experto Creality K1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index_old/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-rocket" viewBox="0 0 24 24"><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09"/><path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Get started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../markdown/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22.27 19.385H1.73A1.73 1.73 0 0 1 0 17.655V6.345a1.73 1.73 0 0 1 1.73-1.73h20.54A1.73 1.73 0 0 1 24 6.345v11.308a1.73 1.73 0 0 1-1.73 1.731zM5.769 15.923v-4.5l2.308 2.885 2.307-2.885v4.5h2.308V8.078h-2.308l-2.307 2.885-2.308-2.885H3.46v7.847zM21.232 12h-2.309V8.077h-2.307V12h-2.308l3.461 4.039z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Markdown in 5min
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion-la-cultura-del-cuidado-tecnico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introducción: La cultura del cuidado técnico
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos-del-modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivos del Módulo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51-mantenimiento-preventivo-ejes-lubricacion-y-boquilla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1. Mantenimiento Preventivo: Ejes, lubricación y boquilla
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1. Mantenimiento Preventivo: Ejes, lubricación y boquilla">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-limpieza-y-lubricacion-de-los-ejes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Limpieza y Lubricación de los Ejes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-mantenimiento-del-hotend-y-la-boquilla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Mantenimiento del Hotend y la Boquilla
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-limpieza-de-la-placa-de-construccion-pei" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Limpieza de la Placa de Construcción (PEI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-inspeccion-de-ventiladores-y-correas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Inspección de Ventiladores y Correas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-solucion-de-problemas-comunes-atascos-nivelacion-y-extrusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2. Solución de Problemas Comunes: Atascos, nivelación y extrusión
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2. Solución de Problemas Comunes: Atascos, nivelación y extrusión">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-atascos-en-el-extrusor-clogging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Atascos en el Extrusor (Clogging)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-problemas-de-adherencia-y-nivelacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Problemas de Adherencia y Nivelación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-errores-de-la-ia-y-sensores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Errores de la IA y Sensores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-calibracion-de-input-shaping-vibraciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Calibración de Input Shaping (Vibraciones)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabla-de-diagnostico-rapido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla de Diagnóstico Rápido
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53-actualizaciones-de-firmware-y-conectividad-manteniendo-la-k1-al-dia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3. Actualizaciones de Firmware y Conectividad: Manteniendo la K1 al día
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3. Actualizaciones de Firmware y Conectividad: Manteniendo la K1 al día">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-por-que-es-critico-actualizar-el-firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. ¿Por qué es crítico actualizar el Firmware?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-metodos-de-actualizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Métodos de Actualización
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-gestion-de-la-red-escolar-wi-fi-y-lan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Gestión de la Red Escolar (Wi-Fi y LAN)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-seguridad-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Seguridad de Datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#54-calendario-de-revisiones-tecnicas-organizacion-del-taller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4. Calendario de Revisiones Técnicas: Organización del taller
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.4. Calendario de Revisiones Técnicas: Organización del taller">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-rutina-diaria-responsabilidad-del-alumnousuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Rutina Diaria (Responsabilidad del Alumno/Usuario)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-revision-mensual-responsabilidad-del-docente-o-encargado-de-taller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Revisión Mensual (Responsabilidad del Docente o Encargado de Taller)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-mantenimiento-trimestral-semestral-puesta-a-punto-profunda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Mantenimiento Trimestral / Semestral (Puesta a punto profunda)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-cuadro-de-mantenimiento-para-el-aula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo de Cuadro de Mantenimiento para el Aula
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+<h1 id="modulo-5-mantenimiento-y-resolucion-de-problemas">Módulo 5: Mantenimiento y Resolución de Problemas</h1>
+<p>Incluso una máquina de alto rendimiento como la <strong>Creality K1</strong> requiere cuidados periódicos para mantener su velocidad y precisión. En un entorno educativo, donde la impresora puede trabajar varias horas al día de la mano de diferentes usuarios, el mantenimiento preventivo es la clave para evitar tiempos de inactividad.</p>
+<hr />
+<h2 id="introduccion-la-cultura-del-cuidado-tecnico">Introducción: La cultura del cuidado técnico</h2>
+<p>Este módulo no trata solo de reparar la máquina cuando falla, sino de integrar el <strong>mantenimiento preventivo</strong> como parte del currículo de aprendizaje técnico. El objetivo es que la impresora esté siempre lista para la siguiente clase y que el docente sepa reaccionar ante los imprevistos más comunes.</p>
+<p>Para la Creality K1, el mantenimiento se divide en tres niveles:</p>
+<ol>
+<li><strong>Mantenimiento Diario:</strong> Acciones rápidas tras cada impresión para asegurar la salud de la máquina.</li>
+<li><strong>Mantenimiento Periódico:</strong> Limpieza de ejes y calibración para evitar ruidos y pérdida de precisión.</li>
+<li><strong>Resolución de Problemas (Troubleshooting):</strong> Diagnóstico rápido de fallos comunes como atascos o errores de nivelación.</li>
+</ol>
+<h2 id="objetivos-del-modulo">Objetivos del Módulo</h2>
+<ul>
+<li>Prolongar la vida útil de la K1 mediante protocolos de limpieza específicos para sistemas <strong>CoreXY</strong>.</li>
+<li>Identificar y solucionar problemas de extrusión y adherencia de forma autónoma.</li>
+<li>Aprender a gestionar las actualizaciones de <strong>Firmware</strong> para mantener la IA y las funciones de red al día.</li>
+<li>Establecer un calendario de revisiones técnicas para el centro educativo.</li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Filosofía del Taller:</strong> "Una impresora limpia es una impresora que no falla". Enseñar a los alumnos a limpiar la base y revisar el extrusor al finalizar su turno fomenta la responsabilidad y el respeto por las herramientas comunes.</p>
+</blockquote>
+<h2 id="51-mantenimiento-preventivo-ejes-lubricacion-y-boquilla">5.1. Mantenimiento Preventivo: Ejes, lubricación y boquilla</h2>
+<p>La <strong>Creality K1</strong> es una máquina de alta velocidad que genera fuerzas de inercia considerables. Para que el sistema <strong>CoreXY</strong> siga siendo silencioso y preciso, es vital realizar una rutina de mantenimiento básico. Sin fricción no hay desgaste.</p>
+<hr />
+<h3 id="a-limpieza-y-lubricacion-de-los-ejes">A. Limpieza y Lubricación de los Ejes</h3>
+<p>A diferencia de otras impresoras, la K1 utiliza barras lineales que deben deslizarse suavemente:</p>
+<ul>
+<li><strong>Ejes X e Y (Barras de acero):</strong> * <strong>Limpieza:</strong> Use un paño seco que no suelte pelusa para eliminar el polvo y los restos de filamento que se acumulan en las barras. <ul>
+<li><strong>Lubricación:</strong> Aplique una gota de <strong>aceite de silicona</strong> o lubricante específico para impresoras 3D cada 200 horas de uso (o una vez al mes). Deslice el cabezal manualmente con la máquina apagada para distribuir el aceite.</li>
+</ul>
+</li>
+<li><strong>Ejes Z (Varillas roscadas):</strong><ul>
+<li>Limpie la grasa vieja que puede haber atrapado polvo y aplique una capa fina de <strong>grasa de litio</strong>. Esto evitará las vibraciones horizontales (<em>z-banding</em>) en las piezas de los alumnos.</li>
+</ul>
+</li>
+</ul>
+<h3 id="b-mantenimiento-del-hotend-y-la-boquilla">B. Mantenimiento del Hotend y la Boquilla</h3>
+<p>La boquilla es el punto de mayor estrés térmico.</p>
+<ul>
+<li><strong>Limpieza Exterior:</strong> Con la boquilla caliente (<strong>200°C</strong>), use un cepillo de latón para eliminar los restos de plástico pegado. <strong>Cuidado:</strong> No use cepillos de acero, ya que pueden dañar el bloque calentador o los cables.</li>
+<li><strong>Cold Pull (Tirón en frío):</strong> Si nota que el flujo de plástico es irregular, realice un <em>cold pull</em> con filamento de limpieza o PLA para extraer impurezas del interior de la boquilla sin desmontarla.</li>
+<li><strong>Apriete en Caliente:</strong> Tras muchas horas de vibración, es recomendable verificar que la boquilla esté bien apretada (siempre realizándolo con la boquilla a <strong>240°C</strong> para evitar roturas).</li>
+</ul>
+<h3 id="c-limpieza-de-la-placa-de-construccion-pei">C. Limpieza de la Placa de Construcción (PEI)</h3>
+<p>Una placa sucia es la causa del 80% de las impresiones fallidas en el aula.</p>
+<ul>
+<li><strong>Protocolo diario:</strong> Limpiar con <strong>alcohol isopropílico</strong> y un paño para quitar la grasa de las manos de los alumnos.</li>
+<li><strong>Limpieza profunda:</strong> Si las piezas dejan de pegarse, lave la placa con <strong>agua templada y jabón lavavajillas neutro</strong>. El jabón elimina aceites que el alcohol a veces solo extiende.</li>
+<li><strong>Evitar daños:</strong> Nunca use espátulas metálicas de forma agresiva; podría rayar el recubrimiento de PEI y arruinar la textura de la base de las piezas.</li>
+</ul>
+<h3 id="d-inspeccion-de-ventiladores-y-correas">D. Inspección de Ventiladores y Correas</h3>
+<ul>
+<li><strong>Ventiladores:</strong> El ventilador lateral de la K1 mueve mucho aire y puede absorber hilos de plástico. Use aire comprimido para mantener las aspas limpias y evitar sobrecalentamientos.</li>
+<li><strong>Tensión de Correas:</strong> Las correas deben estar tensas como una cuerda de guitarra. Si al imprimir círculos estos salen ovalados, es momento de ajustar los tensores traseros de la máquina.</li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Consejo del Docente:</strong> Cree una "Hoja de Vida de la Impresora" pegada junto a la K1. Cada vez que un alumno o profesor lubrique los ejes o limpie la boquilla, debe anotar la fecha. Esto crea el hábito de mantenimiento industrial en los estudiantes.</p>
+</blockquote>
+<h2 id="52-solucion-de-problemas-comunes-atascos-nivelacion-y-extrusion">5.2. Solución de Problemas Comunes: Atascos, nivelación y extrusión</h2>
+<p>Incluso con una máquina tan avanzada como la K1, el uso intensivo en el aula puede presentar desafíos técnicos. Saber diagnosticar el origen del problema ahorra horas de frustración y evita intervenciones innecesarias en el hardware.</p>
+<hr />
+<h3 id="a-atascos-en-el-extrusor-clogging">A. Atascos en el Extrusor (Clogging)</h3>
+<p>Es el problema más frecuente y suele ocurrir por apagar la impresora antes de que el hotend se enfríe o por usar filamentos de mala calidad.</p>
+<ul>
+<li><strong>Síntomas:</strong> El extrusor hace un ruido de "clic-clic" (salto de pasos), no sale filamento o las capas salen incompletas (subextrusión).</li>
+<li><strong>Solución Rápida:</strong> Caliente la boquilla a <strong>260°C</strong> e intente empujar filamento manualmente usando la palanca del extrusor. Si no fluye, use la <strong>aguja de limpieza</strong> incluida para desbloquear la punta.</li>
+<li><strong>Solución Profunda:</strong> Si el atasco es severo, la K1 permite retirar el conjunto del extrusor con solo tres tornillos. Verifique que no haya un trozo de filamento doblado en los engranajes <em>Sprite</em>.</li>
+</ul>
+<h3 id="b-problemas-de-adherencia-y-nivelacion">B. Problemas de Adherencia y Nivelación</h3>
+<p>Aunque la K1 tiene nivelación automática por sensores de fuerza, a veces la primera capa no es perfecta.</p>
+<ul>
+<li><strong>Z-Offset:</strong> Si la boquilla está muy alta (el plástico no se pega) o muy baja (la boquilla raya la placa), ajuste el <strong>Z-Offset</strong> desde la pantalla táctil mientras se imprime la primera capa. Un ajuste de apenas <strong>0.05 mm</strong> puede ser la diferencia entre el éxito y el fracaso.</li>
+<li><strong>Efecto Warping:</strong> Si las esquinas de la pieza se levantan, asegúrese de que el ventilador lateral no esté al 100% desde la primera capa y verifique que no haya corrientes de aire frío en el aula.</li>
+</ul>
+<h3 id="c-errores-de-la-ia-y-sensores">C. Errores de la IA y Sensores</h3>
+<p>A veces la cámara IA puede dar "falsos positivos".</p>
+<ul>
+<li><strong>Lente sucia:</strong> Si la IA pausa la impresión sin motivo aparente, limpie la lente de la cámara con un paño de microfibra. El polvo de las impresiones puede empañarla.</li>
+<li><strong>Error de sensor de filamento:</strong> Si la máquina dice que no hay filamento pero la bobina está llena, verifique que el hilo no esté excesivamente tenso o que el sensor no tenga restos de polvo plástico en su interior.</li>
+</ul>
+<h3 id="d-calibracion-de-input-shaping-vibraciones">D. Calibración de Input Shaping (Vibraciones)</h3>
+<p>Si nota "fantasmas" o ecos en las paredes de las piezas (<em>ghosting</em>):</p>
+<ul>
+<li><strong>Re-calibración:</strong> Ejecute la función de <strong>Autocalibración</strong> desde el menú de configuración. La K1 realizará una serie de vibraciones controladas para medir las resonancias de los ejes y compensarlas mediante software. Esto es esencial tras mover la impresora de sitio o ajustar las correas.</li>
+</ul>
+<hr />
+<h2 id="tabla-de-diagnostico-rapido">Tabla de Diagnóstico Rápido</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Síntoma</th>
+<th style="text-align: left;">Causa probable</th>
+<th style="text-align: left;">Solución sugerida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Clic del extrusor</strong></td>
+<td style="text-align: left;">Atasco o temperatura baja</td>
+<td style="text-align: left;">Subir temperatura 10°C o limpiar boquilla</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Pieza despegada</strong></td>
+<td style="text-align: left;">Placa sucia o Z-Offset alto</td>
+<td style="text-align: left;">Lavar placa con jabón y bajar Z-Offset</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Hilos (Stringing)</strong></td>
+<td style="text-align: left;">Filamento húmedo o calor</td>
+<td style="text-align: left;">Secar filamento o bajar temp. de impresión</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Círculos ovalados</strong></td>
+<td style="text-align: left;">Correas flojas</td>
+<td style="text-align: left;">Tensar correas traseras</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<blockquote>
+<p><strong>Estrategia Pedagógica:</strong> Cuando ocurra un error, no lo solucione usted solo. Llame a un grupo de alumnos y realicen el diagnóstico juntos. Convertir un fallo en una "clase de ingeniería forense" es una de las mejores formas de aprender cómo funcionan realmente las máquinas.</p>
+</blockquote>
+<h2 id="53-actualizaciones-de-firmware-y-conectividad-manteniendo-la-k1-al-dia">5.3. Actualizaciones de Firmware y Conectividad: Manteniendo la K1 al día</h2>
+<p>La Creality K1 es más parecida a un ordenador que a una herramienta tradicional. Su sistema operativo basado en <strong>Creality OS</strong> recibe mejoras constantes que optimizan la velocidad, la precisión de la IA y la estabilidad de la red.</p>
+<hr />
+<h3 id="a-por-que-es-critico-actualizar-el-firmware">A. ¿Por qué es crítico actualizar el Firmware?</h3>
+<p>En un entorno educativo, mantener el software de la máquina actualizado no es opcional, ya que cada versión suele incluir:</p>
+<ul>
+<li><strong>Optimizaciones de Velocidad:</strong> Ajustes en los algoritmos de aceleración para reducir el tiempo de impresión sin perder calidad.</li>
+<li><strong>Mejoras en la IA:</strong> Refinamiento de la detección de fallos (evitando falsos positivos de la cámara).</li>
+<li><strong>Seguridad de Red:</strong> Parches para garantizar que la conexión Wi-Fi del centro sea estable y segura.</li>
+<li><strong>Nuevas Funciones:</strong> A menudo se añaden menús de calibración más intuitivos o compatibilidad con nuevos materiales.</li>
+</ul>
+<h3 id="b-metodos-de-actualizacion">B. Métodos de Actualización</h3>
+<p>Existen dos formas principales de actualizar la K1:</p>
+<ol>
+<li><strong>Vía OTA (Over-the-Air):</strong> Si la impresora está conectada al Wi-Fi del centro, aparecerá un punto rojo en el icono de "Configuración". Es tan sencillo como pulsar "Update" y esperar a que la máquina se reinicie.</li>
+<li><strong>Vía USB:</strong> Si el centro tiene restricciones de red (Firewalls), se debe descargar el archivo <code>.img</code> desde la web oficial de Creality, copiarlo a la raíz de un pendrive e insertarlo en la impresora. El sistema lo detectará automáticamente al encenderse.</li>
+</ol>
+<h3 id="c-gestion-de-la-red-escolar-wi-fi-y-lan">C. Gestión de la Red Escolar (Wi-Fi y LAN)</h3>
+<p>La conectividad permite al docente monitorizar la clase desde su mesa.</p>
+<ul>
+<li><strong>Modo LAN:</strong> Es la opción más estable. Permite enviar archivos directamente desde <strong>Creality Print</strong> a la impresora sin pasar por internet, ideal si la conexión externa del colegio es lenta.</li>
+<li><strong>IP Estática:</strong> Se recomienda configurar una IP fija para la impresora en el router del centro. Así, el software del docente siempre encontrará la máquina en la misma "dirección digital".</li>
+<li><strong>Web Dashboard:</strong> Introduciendo la dirección IP de la K1 en cualquier navegador (Chrome, Edge), se accede a un panel de control avanzado donde se puede ver la cámara en pantalla completa y ajustar temperaturas en tiempo real.</li>
+</ul>
+<h3 id="d-seguridad-de-datos">D. Seguridad de Datos</h3>
+<ul>
+<li><strong>Privacidad de la Cámara:</strong> Asegúrese de informar que la cámara solo es accesible por los usuarios vinculados a la cuenta de Creality Cloud del centro o dentro de la red local.</li>
+<li><strong>Cuentas de Usuario:</strong> Se recomienda que solo el docente tenga el control total ("Admin") de la impresora para evitar que alumnos borren archivos de otros compañeros o cambien configuraciones críticas de fábrica.</li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Aviso Importante:</strong> Nunca apague la impresora ni retire el pendrive durante un proceso de actualización de firmware. Esto podría corromper el sistema operativo y requerir una recuperación técnica compleja.</p>
+</blockquote>
+<h2 id="54-calendario-de-revisiones-tecnicas-organizacion-del-taller">5.4. Calendario de Revisiones Técnicas: Organización del taller</h2>
+<p>Para asegurar que la <strong>Creality K1</strong> esté siempre operativa para la siguiente clase, es fundamental pasar de un modelo de "reparar cuando se rompa" a uno de <strong>mantenimiento programado</strong>. Un calendario visual junto a la impresora permite que tanto docentes como alumnos avanzados participen en el cuidado del equipo.</p>
+<hr />
+<h3 id="a-rutina-diaria-responsabilidad-del-alumnousuario">A. Rutina Diaria (Responsabilidad del Alumno/Usuario)</h3>
+<p>Estas tareas deben realizarse al finalizar cada sesión de impresión:</p>
+<ul>
+<li><strong>Limpieza de la placa PEI:</strong> Pasar un paño con alcohol isopropílico para eliminar huellas.</li>
+<li><strong>Inspección de la cámara:</strong> Verificar que la lente no tenga polvo para que la IA funcione correctamente.</li>
+<li><strong>Vaciado de restos:</strong> Retirar los hilos o trozos de plástico que caen en el fondo de la cámara de impresión para evitar que bloqueen los ventiladores.</li>
+</ul>
+<h3 id="b-revision-mensual-responsabilidad-del-docente-o-encargado-de-taller">B. Revisión Mensual (Responsabilidad del Docente o Encargado de Taller)</h3>
+<p>Una vez al mes (o cada 200 horas de uso), se debe dedicar 15 minutos a:</p>
+<ul>
+<li><strong>Lubricación de ejes:</strong> Aplicar aceite de silicona en las barras X e Y y grasa de litio en los husillos Z.</li>
+<li><strong>Tensión de correas:</strong> Comprobar visualmente que las correas no presentan deshilachados y que mantienen la tensión adecuada.</li>
+<li><strong>Limpieza de ventiladores:</strong> Usar aire comprimido para limpiar el ventilador de capa y el ventilador del hotend.</li>
+</ul>
+<h3 id="c-mantenimiento-trimestral-semestral-puesta-a-punto-profunda">C. Mantenimiento Trimestral / Semestral (Puesta a punto profunda)</h3>
+<p>Coincidiendo con los periodos de vacaciones o evaluaciones, se recomienda:</p>
+<ul>
+<li><strong>Inspección del extrusor:</strong> Desmontar la tapa del extrusor <em>Sprite</em> para limpiar posibles restos de filamento triturado en los engranajes.</li>
+<li><strong>Sustitución de boquilla:</strong> Si la calidad de superficie ha bajado notablemente, cambiar la boquilla por una nueva para recuperar la precisión original.</li>
+<li><strong>Actualización y Backup:</strong> Verificar versiones de firmware y realizar una limpieza de la memoria interna de la impresora (borrar archivos de proyectos antiguos finalizados).</li>
+</ul>
+<hr />
+<h3 id="ejemplo-de-cuadro-de-mantenimiento-para-el-aula">Ejemplo de Cuadro de Mantenimiento para el Aula</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Frecuencia</th>
+<th style="text-align: left;">Tarea</th>
+<th style="text-align: left;">Responsable</th>
+<th style="text-align: center;">Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Diaria</strong></td>
+<td style="text-align: left;">Limpieza de Placa PEI</td>
+<td style="text-align: left;">Alumno</td>
+<td style="text-align: center;">[ ]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mensual</strong></td>
+<td style="text-align: left;">Lubricación de Ejes X/Y/Z</td>
+<td style="text-align: left;">Docente</td>
+<td style="text-align: center;">[ ]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Trimestral</strong></td>
+<td style="text-align: left;">Calibración <em>Input Shaping</em></td>
+<td style="text-align: left;">Docente</td>
+<td style="text-align: center;">[ ]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Semestral</strong></td>
+<td style="text-align: left;">Cambio de Boquilla (Nozzle)</td>
+<td style="text-align: left;">Técnico/Docente</td>
+<td style="text-align: center;">[ ]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<blockquote>
+<p><strong>Consejo del Mes:</strong> Involucre a los alumnos en la revisión mensual. Asignar el rol de "Jefe de Mantenimiento" a un alumno diferente cada mes fomenta el sentido de propiedad y cuidado del material público, además de proporcionarles conocimientos de mecánica real.</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../04_materiales_proyectos/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Módulo 4: Materiales y Aplicaciones Educativas">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Módulo 4: Materiales y Aplicaciones Educativas
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../05_postprocesado/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Módulo 5: Post-procesado y Acabados">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Módulo 5: Post-procesado y Acabados
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 The authors
+
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.path","navigation.sections","navigation.top","navigation.tracking","search.highlight"],"search":"../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copiado al portapapeles","clipboard.copy":"Copiar al portapapeles","search.result.more.one":"1 más en esta página","search.result.more.other":"# más en esta página","search.result.none":"No se encontraron documentos","search.result.one":"1 documento encontrado","search.result.other":"# documentos encontrados","search.result.placeholder":"Teclee para comenzar búsqueda","search.result.term.missing":"Falta","select.version":"Seleccionar versión"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.91a19a9e.min.js"></script>
+      
+    
+  </body>
+</html>

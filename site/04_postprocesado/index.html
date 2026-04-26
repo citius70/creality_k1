@@ -1,0 +1,1413 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A new project generated from the default template project.">
+      
+      
+        <meta name="author" content="<your name here>">
+      
+      
+      
+        <link rel="prev" href="../04_materiales_proyectos/">
+      
+      
+        <link rel="next" href="../05_mantenimiento_troubleshooting/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.32">
+    
+    
+      
+        <title>Módulo 4: Post-procesado y Acabados - Impresión FDM</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.53a7feaf.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="Navegación"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modulo-4-post-procesado-y-acabados" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="./.." title="Impresión FDM" class="md-header__button md-logo" aria-label="Impresión FDM" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navegación">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Impresión FDM
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Módulo 4: Post-procesado y Acabados
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Buscar">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Buscar">
+  <button type="button" class="md-search__button">
+    Buscar
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="Impresión FDM" class="md-nav__button md-logo" aria-label="Impresión FDM" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    Impresión FDM
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Curso de impresión FDM con Creality K1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_hardware_k1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📑 Módulo 1: Impresión FDM y Hardware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_modelos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 2: Diseño y Obtención de Modelos 3D
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_software_ecosistema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 3: Ecosistema de Software y Gestión de Aula
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_materiales_proyectos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 4: Materiales y Aplicaciones Educativas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 4: Post-procesado y Acabados
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 4: Post-procesado y Acabados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion-el-valor-del-detalle-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introducción: El valor del detalle final
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41-retirada-de-soportes-herramientas-y-tecnicas-para-no-danar-la-pieza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Retirada de Soportes: Herramientas y técnicas para no dañar la pieza
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1. Retirada de Soportes: Herramientas y técnicas para no dañar la pieza">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-herramientas-esenciales-del-kit-de-post-procesado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Herramientas Esenciales del "Kit de Post-procesado"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-tecnicas-segun-el-tipo-de-soporte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Técnicas según el tipo de soporte
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-el-secreto-de-la-temperatura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. El "Secreto" de la Temperatura
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C. El &quot;Secreto&quot; de la Temperatura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#d-prevencion-la-distancia-z-en-el-laminador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Prevención: La "Distancia Z" en el Laminador
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-tratamiento-de-superficies-lijado-imprimacion-y-tecnicas-de-pintura-para-el-aula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. Tratamiento de Superficies: Lijado, imprimación y técnicas de pintura para el aula
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2. Tratamiento de Superficies: Lijado, imprimación y técnicas de pintura para el aula">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-el-arte-del-lijado-sanding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. El Arte del Lijado (Sanding)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-imprimacion-rellenando-los-surcos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Imprimación: Rellenando los surcos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-pintura-y-color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Pintura y Color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-acabado-con-calor-heat-gun" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Acabado con Calor (Heat Gun)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-union-de-piezas-adhesivos-adecuados-para-diferentes-filamentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3. Unión de Piezas: Adhesivos adecuados para diferentes filamentos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3. Unión de Piezas: Adhesivos adecuados para diferentes filamentos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-cianoacrilato-super-glue-el-estandar-para-pla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Cianoacrilato (Super Glue): El estándar para PLA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-pegamento-de-poliuretano-o-epoxi-bicomponente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Pegamento de Poliuretano o Epoxi (Bicomponente)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-soldadura-por-friccion-o-calor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Soldadura por Fricción o Calor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-diseno-de-uniones-mecanicas-ensambles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Diseño de Uniones Mecánicas (Ensambles)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-limpieza-y-toques-finales-el-control-de-calidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4. Limpieza y Toques Finales: El control de calidad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4. Limpieza y Toques Finales: El control de calidad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-eliminacion-de-pelos-stringing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Eliminación de "Pelos" (Stringing)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-limpieza-de-residuos-de-la-cama-adhesivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Limpieza de Residuos de la Cama (Adhesivos)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-ajuste-de-tolerancias-mecanicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Ajuste de Tolerancias Mecánicas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-verificacion-de-seguridad-uso-escolar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Verificación de Seguridad (Uso Escolar)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_mantenimiento_troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 5: Mantenimiento y Resolución de Problemas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06_resumen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resumen de la Formación: Creality K1 en el Aula
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07_examen_cert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎓 Examen de Certificación: Operador Experto Creality K1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index_old/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-rocket" viewBox="0 0 24 24"><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09"/><path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Get started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../markdown/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22.27 19.385H1.73A1.73 1.73 0 0 1 0 17.655V6.345a1.73 1.73 0 0 1 1.73-1.73h20.54A1.73 1.73 0 0 1 24 6.345v11.308a1.73 1.73 0 0 1-1.73 1.731zM5.769 15.923v-4.5l2.308 2.885 2.307-2.885v4.5h2.308V8.078h-2.308l-2.307 2.885-2.308-2.885H3.46v7.847zM21.232 12h-2.309V8.077h-2.307V12h-2.308l3.461 4.039z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Markdown in 5min
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion-el-valor-del-detalle-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introducción: El valor del detalle final
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41-retirada-de-soportes-herramientas-y-tecnicas-para-no-danar-la-pieza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Retirada de Soportes: Herramientas y técnicas para no dañar la pieza
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1. Retirada de Soportes: Herramientas y técnicas para no dañar la pieza">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-herramientas-esenciales-del-kit-de-post-procesado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Herramientas Esenciales del "Kit de Post-procesado"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-tecnicas-segun-el-tipo-de-soporte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Técnicas según el tipo de soporte
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-el-secreto-de-la-temperatura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. El "Secreto" de la Temperatura
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C. El &quot;Secreto&quot; de la Temperatura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#d-prevencion-la-distancia-z-en-el-laminador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Prevención: La "Distancia Z" en el Laminador
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-tratamiento-de-superficies-lijado-imprimacion-y-tecnicas-de-pintura-para-el-aula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. Tratamiento de Superficies: Lijado, imprimación y técnicas de pintura para el aula
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2. Tratamiento de Superficies: Lijado, imprimación y técnicas de pintura para el aula">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-el-arte-del-lijado-sanding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. El Arte del Lijado (Sanding)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-imprimacion-rellenando-los-surcos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Imprimación: Rellenando los surcos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-pintura-y-color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Pintura y Color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-acabado-con-calor-heat-gun" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Acabado con Calor (Heat Gun)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-union-de-piezas-adhesivos-adecuados-para-diferentes-filamentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3. Unión de Piezas: Adhesivos adecuados para diferentes filamentos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3. Unión de Piezas: Adhesivos adecuados para diferentes filamentos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-cianoacrilato-super-glue-el-estandar-para-pla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Cianoacrilato (Super Glue): El estándar para PLA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-pegamento-de-poliuretano-o-epoxi-bicomponente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Pegamento de Poliuretano o Epoxi (Bicomponente)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-soldadura-por-friccion-o-calor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Soldadura por Fricción o Calor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-diseno-de-uniones-mecanicas-ensambles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Diseño de Uniones Mecánicas (Ensambles)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-limpieza-y-toques-finales-el-control-de-calidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4. Limpieza y Toques Finales: El control de calidad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4. Limpieza y Toques Finales: El control de calidad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-eliminacion-de-pelos-stringing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Eliminación de "Pelos" (Stringing)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-limpieza-de-residuos-de-la-cama-adhesivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Limpieza de Residuos de la Cama (Adhesivos)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-ajuste-de-tolerancias-mecanicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Ajuste de Tolerancias Mecánicas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-verificacion-de-seguridad-uso-escolar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Verificación de Seguridad (Uso Escolar)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+<h1 id="modulo-4-post-procesado-y-acabados">Módulo 4: Post-procesado y Acabados</h1>
+<p>La impresión 3D no termina cuando el cabezal de la <strong>Creality K1</strong> regresa a su posición de origen. El post-procesado es la etapa donde transformamos un objeto de plástico en bruto en un producto final funcional, estético o educativo. </p>
+<h2 id="introduccion-el-valor-del-detalle-final">Introducción: El valor del detalle final</h2>
+<p>En el entorno escolar, el post-procesado es una fase crítica del aprendizaje. Mientras que la K1 se encarga de la fabricación de alta precisión, el alumno se encarga del refinamiento. Esta etapa permite:</p>
+<ol>
+<li><strong>Corregir Imperfecciones:</strong> Eliminar las estructuras de soporte necesarias para la impresión pero ajenas al diseño original.</li>
+<li><strong>Mejorar la Estética:</strong> Ocultar las líneas de capa naturales de la tecnología FDM mediante técnicas de abrasión y recubrimiento.</li>
+<li><strong>Ensamblar Proyectos Complejos:</strong> Unir piezas que, por su tamaño o geometría, han sido impresas por separado, fomentando el pensamiento lógico y la visión espacial.</li>
+<li><strong>Desarrollar Habilidades Manuales:</strong> El uso de herramientas de corte, lijado y pintura complementa la formación digital con destreza física.</li>
+</ol>
+<p>Un buen post-procesado puede salvar una pieza con pequeños errores estéticos y elevar la calidad de un proyecto STEM al nivel de un prototipo profesional. En este módulo, aprenderemos a realizar estas tareas de forma segura y eficiente dentro del aula.</p>
+<hr />
+<blockquote>
+<p><strong>Nota para el docente:</strong> Es fundamental establecer una "zona de acabado" en el taller, separada de las impresoras, para evitar que el polvo del lijado o los vapores de los adhesivos afecten a la mecánica de precisión de la K1.</p>
+</blockquote>
+<h2 id="41-retirada-de-soportes-herramientas-y-tecnicas-para-no-danar-la-pieza">4.1. Retirada de Soportes: Herramientas y técnicas para no dañar la pieza</h2>
+<p>En la Creality K1, debido a su alta velocidad, las estructuras de soporte pueden compactarse más de lo habitual. Una retirada descuidada no solo puede dejar marcas estéticas (cicatrices), sino que puede romper partes funcionales del diseño del alumno.</p>
+<hr />
+<h3 id="a-herramientas-esenciales-del-kit-de-post-procesado">A. Herramientas Esenciales del "Kit de Post-procesado"</h3>
+<p>Para trabajar con seguridad en el aula, cada estación de trabajo debería contar con:</p>
+<ul>
+<li><strong>Alicates de corte lateral (incluidos con la K1):</strong> Son la herramienta principal. Su cara plana permite cortar el soporte a ras de la pieza.</li>
+<li><strong>Pinzas de punta fina:</strong> Ideales para alcanzar soportes en cavidades internas o zonas estrechas donde los dedos no llegan.</li>
+<li><strong>Espátula metálica y flexible:</strong> Útil para separar la base del soporte de la placa PEI antes de empezar a desgranar la pieza.</li>
+<li><strong>Gafas de seguridad:</strong> <strong>Obligatorias.</strong> El PLA es un material rígido; al saltar, los restos de soporte pueden ser proyectados hacia los ojos con fuerza.</li>
+</ul>
+<h3 id="b-tecnicas-segun-el-tipo-de-soporte">B. Técnicas según el tipo de soporte</h3>
+<ul>
+<li><strong>Soportes Orgánicos/Árbol (Tree):</strong> * <em>Técnica:</em> No tire con fuerza bruta. Gire la estructura de "tronco" del soporte. Al ser huecos y ramificados, suelen colapsar sobre sí mismos y desprenderse en grandes bloques.<ul>
+<li><em>Punto de contacto:</em> Si quedan pequeños puntos unidos a la pieza, córtelos con el alicate en lugar de arrancarlos para evitar el "pitting" (pequeños agujeros en la superficie).</li>
+</ul>
+</li>
+<li><strong>Soportes Lineales/Normales:</strong><ul>
+<li><em>Técnica:</em> Use el alicate para "morder" las esquinas del soporte y debilitar la estructura. Una vez que una esquina se suelta, el resto suele salir en forma de acordeón.</li>
+</ul>
+</li>
+</ul>
+<h3 id="c-el-secreto-de-la-temperatura">C. El "Secreto" de la Temperatura</h3>
+<p>El PLA se vuelve más quebradizo cuando está frío. </p>
+<ul>
+<li><strong>Truco para el docente:</strong> Si un soporte está especialmente rebelde, use un <strong>decapador térmico</strong> o un secador de pelo a baja temperatura durante unos segundos sobre la zona. El plástico se ablandará ligeramente, permitiendo que el soporte se retire "como si fuera chicle", evitando roturas en la pieza principal.</li>
+</ul>
+<h4 id="d-prevencion-la-distancia-z-en-el-laminador">D. Prevención: La "Distancia Z" en el Laminador</h4>
+<p>Para minimizar el trabajo en este apartado, asegúrese de que en el software <strong>Creality Print</strong> el parámetro <strong>"Top Contact Z Distance"</strong> esté configurado entre <strong>0.2 mm y 0.25 mm</strong>. </p>
+<ul>
+<li>Si es menor, el soporte se soldará a la pieza.</li>
+<li>Si es mayor, el soporte no sostendrá nada y la pieza saldrá mal.</li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Regla de oro para el alumno:</strong> "Corta el soporte, no la pieza". Siempre es mejor dejar un milímetro de soporte y lijarlo después que intentar cortarlo a ras y llevarse un trozo del diseño original por delante.</p>
+</blockquote>
+<h2 id="42-tratamiento-de-superficies-lijado-imprimacion-y-tecnicas-de-pintura-para-el-aula">4.2. Tratamiento de Superficies: Lijado, imprimación y técnicas de pintura para el aula</h2>
+<p>Una vez retirados los soportes, la pieza presentará marcas de fabricación (líneas de capa) y puntos de contacto. El tratamiento de superficies es el proceso de "maquillado" técnico que otorga a la pieza un acabado profesional.</p>
+<hr />
+<h3 id="a-el-arte-del-lijado-sanding">A. El Arte del Lijado (Sanding)</h3>
+<p>El PLA es un termoplástico, lo que significa que si lo lijas muy rápido, el calor por fricción lo derretirá en lugar de pulirlo.</p>
+<ul>
+<li><strong>Lijado en húmedo:</strong> Esta es la técnica clave. Sumergir la lija en agua o mojar la pieza evita que el plástico se caliente y que el polvo fino quede en suspensión (manteniendo el aula limpia de microplásticos).</li>
+<li><strong>Granulometría Progresiva:</strong><ul>
+<li><strong>Grano 120-220:</strong> Para eliminar restos de soportes y escalones evidentes.</li>
+<li><strong>Grano 400:</strong> Para unificar la superficie.</li>
+<li><strong>Grano 600 o superior:</strong> Solo si se busca un acabado suave al tacto antes de pintar.</li>
+</ul>
+</li>
+</ul>
+<h3 id="b-imprimacion-rellenando-los-surcos">B. Imprimación: Rellenando los surcos</h3>
+<p>La impresión 3D FDM siempre deja micro-valles entre capas. Para eliminarlos sin lijar durante horas, usamos la <strong>imprimación de relleno (Filler Primer)</strong>:</p>
+<ul>
+<li><strong>Función:</strong> Es una pintura espesa que se deposita en los huecos.</li>
+<li><strong>Aplicación:</strong> Se aplican 2 o 3 capas finas. Una vez seca, se realiza un lijado suave (grano 400). Verás cómo la imprimación se queda en los valles y desaparece en las crestas, dejando la superficie totalmente lisa.</li>
+<li><strong>Seguridad:</strong> En el colegio, esto debe hacerse en una <strong>zona ventilada</strong> o en una cabina de pintura con filtro, usando mascarilla.</li>
+</ul>
+<h3 id="c-pintura-y-color">C. Pintura y Color</h3>
+<p>Para proyectos escolares, la seguridad es lo primero:</p>
+<ul>
+<li><strong>Pinturas Acrílicas:</strong> Son las mejores para el aula. No son tóxicas, se diluyen en agua y se adhieren perfectamente al PLA imprimado.</li>
+<li><strong>Rotuladores Posca/Acrílicos:</strong> Excelentes para que los alumnos dibujen detalles sobre las piezas impresas sin necesidad de pinceles o botes de pintura, reduciendo las manchas en el mobiliario.</li>
+<li><strong>Spray:</strong> Ofrece un acabado más uniforme (tipo industrial), pero requiere mayor control y protecciones.</li>
+</ul>
+<h3 id="d-acabado-con-calor-heat-gun">D. Acabado con Calor (Heat Gun)</h3>
+<p>A veces, tras el post-procesado, el PLA puede presentar zonas blanquecinas por el esfuerzo mecánico. </p>
+<ul>
+<li><strong>Técnica:</strong> Una pasada rápida (1-2 segundos) con una pistola de aire caliente devolverá el color original al plástico y eliminará cualquier hilo (<em>stringing</em>) microscópico que haya quedado tras la impresión a alta velocidad.</li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Consejo para el Docente:</strong> Organiza una "estación de lijado" con bandejas de agua. Esto no solo facilita el trabajo, sino que contiene los residuos de plástico en un solo lugar, permitiendo su correcta gestión posterior.</p>
+</blockquote>
+<h2 id="43-union-de-piezas-adhesivos-adecuados-para-diferentes-filamentos">4.3. Unión de Piezas: Adhesivos adecuados para diferentes filamentos</h2>
+<p>Debido a que la Creality K1 tiene un volumen de impresión de <span class="arithmatex">\(250 \times 250 \times 250\)</span> mm, muchos proyectos de gran envergadura (como maquetas de arquitectura, prótesis a escala real o chasis de robótica) deberán imprimirse por partes. La unión de estas piezas es un paso crítico para garantizar la resistencia estructural del conjunto.</p>
+<hr />
+<h3 id="a-cianoacrilato-super-glue-el-estandar-para-pla">A. Cianoacrilato (Super Glue): El estándar para PLA</h3>
+<p>Es el adhesivo más utilizado en el aula por su rapidez y fuerza.</p>
+<ul>
+<li><strong>Funcionamiento:</strong> Crea una unión química casi instantánea con el <strong>Hyper PLA</strong>.</li>
+<li><strong>Técnica:</strong> Aplica el pegamento en una sola cara. Para piezas que no encajan perfectamente, puedes usar un <strong>acelerador en spray</strong> en la otra cara para que la unión sea inmediata.</li>
+<li><strong>Limitación:</strong> Es muy rígido. Si la pieza va a recibir impactos o debe ser flexible, la unión podría cristalizar y romperse.</li>
+</ul>
+<h3 id="b-pegamento-de-poliuretano-o-epoxi-bicomponente">B. Pegamento de Poliuretano o Epoxi (Bicomponente)</h3>
+<p>Ideal para proyectos de ingeniería donde la resistencia es la prioridad.</p>
+<ul>
+<li><strong>Epoxi:</strong> Consiste en una resina y un endurecedor. Es excelente para rellenar huecos si las piezas han sufrido una ligera contracción.</li>
+<li><strong>Uso:</strong> Requiere mezcla previa y un tiempo de curado de al menos 5-10 minutos, lo que permite al alumno ajustar la posición de las piezas antes de que se fijen definitivamente.</li>
+</ul>
+<h3 id="c-soldadura-por-friccion-o-calor">C. Soldadura por Fricción o Calor</h3>
+<p>Una técnica avanzada y muy económica que aprovecha los restos de filamento:</p>
+<ul>
+<li><strong>Dremel/Herramienta rotativa:</strong> Se coloca un trozo pequeño de filamento en el mandril de la herramienta. Al girar a altas revoluciones, el calor por fricción funde el filamento y la pieza, creando una soldadura plástica real.</li>
+<li><strong>Pirograbador o Soldador:</strong> A baja temperatura, se puede fundir ligeramente la unión y "coserla" con un poco de filamento adicional. Es la unión más fuerte posible, aunque requiere un lijado posterior (4.2).</li>
+</ul>
+<h3 id="d-diseno-de-uniones-mecanicas-ensambles">D. Diseño de Uniones Mecánicas (Ensambles)</h3>
+<p>La mejor unión es la que viene integrada desde el diseño digital:</p>
+<ul>
+<li><strong>Pins y Agujeros:</strong> Incluir pequeños cilindros y huecos en las caras de unión para asegurar que las piezas se alineen perfectamente antes de pegar.</li>
+<li><strong>Cola de milano / Pestañas:</strong> Diseñar encajes que no necesiten pegamento, lo que permite que el proyecto sea desmontable y facilita el aprendizaje sobre tolerancias y ajustes mecánicos.</li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Seguridad en el aula:</strong> Al trabajar con cianoacrilato, es vital el uso de guantes de nitrilo y evitar el contacto con los ojos. Si se utiliza la técnica de soldadura por calor, debe hacerse bajo supervisión directa para evitar quemaduras y en zonas bien ventiladas para no inhalar los vapores del plástico fundido.</p>
+</blockquote>
+<h2 id="44-limpieza-y-toques-finales-el-control-de-calidad">4.4. Limpieza y Toques Finales: El control de calidad</h2>
+<p>El último paso del post-procesado no consiste en añadir, sino en <strong>perfeccionar</strong>. En esta etapa, el alumno realiza el control de calidad final para asegurar que la pieza sea funcional y segura para su manipulación.</p>
+<hr />
+<h3 id="a-eliminacion-de-pelos-stringing">A. Eliminación de "Pelos" (Stringing)</h3>
+<p>A pesar de la excelente retracción de la K1, al imprimir a 600 mm/s pueden aparecer hilos microscópicos, especialmente si el filamento ha absorbido algo de humedad.</p>
+<ul>
+<li><strong>La técnica del soplete/encendedor:</strong> Pasar una llama rápida (menos de 1 segundo) por la superficie de la pieza. El calor desintegra los hilos finos sin llegar a deformar la estructura principal.</li>
+<li><strong>Pistola de aire caliente:</strong> Es la opción más segura para el aula. Ajustada a <strong>150°C - 200°C</strong>, elimina el <em>stringing</em> y devuelve el brillo a las zonas que se hayan quedado blanquecinas tras retirar los soportes.</li>
+</ul>
+<h3 id="b-limpieza-de-residuos-de-la-cama-adhesivos">B. Limpieza de Residuos de la Cama (Adhesivos)</h3>
+<p>Si se ha utilizado laca o pegamento en barra sobre la placa PEI para asegurar la adherencia:</p>
+<ul>
+<li><strong>Lavado con agua y jabón:</strong> El PLA es resistente al agua. Un lavado rápido elimina los restos de adhesivo de la base de la pieza.</li>
+<li><strong>Alcohol Isopropílico (IPA):</strong> Para eliminar huellas dactilares o restos de grasa antes de la pintura final. <strong>Nota:</strong> El alcohol puede dejar el PLA mate si se frota en exceso.</li>
+</ul>
+<h3 id="c-ajuste-de-tolerancias-mecanicas">C. Ajuste de Tolerancias Mecánicas</h3>
+<p>En proyectos de ingeniería, es común que los ejes o engranajes encajen un poco "apretados" debido a la expansión térmica del plástico.</p>
+<ul>
+<li><strong>Escariado manual:</strong> Usar una broca o una lima redonda para repasar los agujeros donde deban pasar ejes.</li>
+<li><strong>Lubricación:</strong> Para mecanismos funcionales impresos en la K1, una pequeña gota de grasa de litio o aceite de silicona marcará la diferencia entre un juguete que se atasca y una máquina que funciona suavemente.</li>
+</ul>
+<h3 id="d-verificacion-de-seguridad-uso-escolar">D. Verificación de Seguridad (Uso Escolar)</h3>
+<p>Antes de entregar el proyecto o darlo por finalizado, el alumno debe verificar:</p>
+<ul>
+<li><strong>Aristas cortantes:</strong> Comprobar que no hayan quedado rebabas de plástico duro que puedan cortar.</li>
+<li><strong>Estabilidad:</strong> Asegurarse de que las uniones pegadas en el paso 4.3 han curado totalmente y son estructuralmente seguras.</li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Checklist del Alumno:</strong> Una buena práctica es tener una lista de verificación en el taller:
+1. ¿He quitado todos los soportes?
+2. ¿He eliminado los hilos con calor?
+3. ¿La pieza encaja donde debería?
+4. ¿He limpiado mi zona de trabajo?</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../04_materiales_proyectos/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Módulo 4: Materiales y Aplicaciones Educativas">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Módulo 4: Materiales y Aplicaciones Educativas
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../05_mantenimiento_troubleshooting/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Módulo 5: Mantenimiento y Resolución de Problemas">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Módulo 5: Mantenimiento y Resolución de Problemas
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 The authors
+
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.path","navigation.sections","navigation.top","navigation.tracking","search.highlight"],"search":"../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copiado al portapapeles","clipboard.copy":"Copiar al portapapeles","search.result.more.one":"1 más en esta página","search.result.more.other":"# más en esta página","search.result.none":"No se encontraron documentos","search.result.one":"1 documento encontrado","search.result.other":"# documentos encontrados","search.result.placeholder":"Teclee para comenzar búsqueda","search.result.term.missing":"Falta","select.version":"Seleccionar versión"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.91a19a9e.min.js"></script>
+      
+    
+  </body>
+</html>
